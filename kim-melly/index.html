@@ -4,9 +4,74 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Your Name Here</title>
-  
-  </head>
-  <body>
-  
-  </body>
+      <style>
+        @font-face {
+  font-family: 'Backso';
+  src: url('backso/Backso.ttf') format('truetype');
+}
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          height: 100vh;
+          background: #0A0A0F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Backso';
+        }
+    
+        .name-tag {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 0.1em;
+          color: #FFD966;
+        }
+    
+        .letter {
+          font-size: 16vw;
+          font-variation-settings: "wght" 400, "CASL" 0.5;
+          transition: transform 0.3s ease, color 0.3s ease, font-variation-settings 0.3s ease;
+          cursor: pointer;
+        }
+    
+        .letter:hover {
+          transform: scale(1.2) rotate(-5deg);
+          font-variation-settings: "wght" 700, "CASL" 1;
+          color: #F89DAF;
+        }
+    
+        .letter:active {
+          color: #7A5FFF;
+          transform: scale(1.4) rotate(5deg);
+        }
+    
+        /* Breakpoints */
+        @media (max-width: 900px) {
+          .letter { font-size: 16vw; }
+        }
+    
+        @media (max-width: 650px) {
+          .letter { font-size: 20vw; }
+        }
+    
+        @media (max-width: 450px) {
+          .letter { font-size: 24vw; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="name-tag">
+        <span class="letter">M</span>
+        <span class="letter">E</span>
+        <span class="letter">L</span>
+        <span class="letter">L</span>
+        <span class="letter">Y</span>
+      </div>
+    </body>
   </html>
